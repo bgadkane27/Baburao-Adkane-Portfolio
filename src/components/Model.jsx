@@ -1,0 +1,24 @@
+import { useGLTF } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import { useRef, useEffect } from "react";
+
+const Model = () => {
+  const model = useGLTF('/models/mushrooms.glb'); 
+  const ref = useRef();
+
+  useFrame(() => {
+    ref.current.rotation.y += 0.002;
+    // ref.current.rotation.x += 0.002;
+  });  
+
+  return (
+    <primitive 
+    ref={ref} 
+    object={model.scene} 
+    scale={1.35}
+    position={[0, -0.50, -1.5]}
+    />
+  );
+};
+
+export default Model;
