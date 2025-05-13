@@ -16,7 +16,7 @@ const HeroSection = () => {
       </Canvas>
 
       <div className="hero-content">
-        <h1 className="uppercase text-nowrap"><strong>Baburao Adkane</strong></h1>
+        <h1 className="uppercase text-nowrap" data-aos="fade-up" data-aos-duration="2000"><strong>Baburao Adkane</strong></h1>
         <div>
           <p className="uppercase font-semibold sm:text-xl text-[14px]">QA/QC ENGINEER</p>
         </div>
