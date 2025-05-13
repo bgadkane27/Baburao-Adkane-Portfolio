@@ -2091,11 +2091,10 @@ section {
     /* font-size: 64px; */
     font-size: 5vw;
     letter-spacing: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   
   .hero-content p {
-    /* font-size: 1vw; */
     letter-spacing: 4px;
     margin-bottom: 40px;
   }
