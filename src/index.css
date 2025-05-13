@@ -2089,12 +2089,13 @@ section {
   
   .hero-content h1 {
     /* font-size: 64px; */
-    /* font-size: 5vw; */
+    font-size: 5vw;
     letter-spacing: 12px;
     margin-bottom: 10px;
   }
   
   .hero-content p {
+    /* font-size: 1vw; */
     letter-spacing: 4px;
     margin-bottom: 40px;
   }
