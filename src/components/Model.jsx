@@ -15,7 +15,7 @@ const Model = () => {
     <primitive 
     ref={ref} 
     object={model.scene} 
-    scale={0.3}
+    scale={0.25}
     position={[0, -0.20, -1]}
     />
   );
