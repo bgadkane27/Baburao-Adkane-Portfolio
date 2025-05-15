@@ -1,12 +1,15 @@
-import React from 'react'
+import CommonCanvas from "../components/CommonCanvas";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
-    <h2 className="text-3xl mb-6">Contact</h2>
-    <p className="text-lg">This is where your project content goes!</p>
-  </div>
-  )
+    <div className="hero-container relative">
+      <CommonCanvas />
+      <div className="hero-content">
+        <h1 className="text-6xl font-bold">WORK</h1>
+        <p className="mt-4 text-lg tracking-widest">PROJECTS | COLLABORATIONS | EXPLORATIONS</p>
+      </div>
+    </div>
+  );
 }
 
 export default Contact;
