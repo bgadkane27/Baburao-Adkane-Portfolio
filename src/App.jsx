@@ -18,12 +18,13 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import HeroSection from "./sections/HeroSection";
-import WorkSection from "./sections/WorkSection";
-import ExperienceSection from "./sections/ExperienceSection";
-import SkillsSection from "./sections/SkillsSection";
-import TestimonialsSection from "./sections/TestimonialsSection";
-import ContactSection from "./sections/ContactSection";
+import HeroSection from "./components/HeroSection";
+import WorkSection from "./components/WorkSection";
+import ExperienceSection from "./components/ExperienceSection";
+import SkillsSection from "./components/SkillsSection";
+import TestimonialsSection from "./components/TestimonialsSection";
+import ContactSection from "./components/ContactSection";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -31,22 +32,23 @@ function App() {
   const renderSection = () => {
     switch (activeSection) {
       case "work":
-        return <WorkSection onBack={() => setActiveSection("hero")} />;
+        return <WorkSection />;
       case "experience":
-        return <ExperienceSection onBack={() => setActiveSection("hero")} />;
+        return <ExperienceSection />;
       case "skills":
-        return <SkillsSection onBack={() => setActiveSection("hero")} />;
+        return <SkillsSection />;
       case "testimonials":
-        return <TestimonialsSection onBack={() => setActiveSection("hero")} />;
+        return <TestimonialsSection />;
       case "contact":
-        return <ContactSection onBack={() => setActiveSection("hero")} />;
+        return <ContactSection />;
       default:
-        return <HeroSection onSelectSection={setActiveSection} />;
+        return <HeroSection />;
     }
   };
 
   return (
-    <div className="min-h-screen overflow-hidden">
+    <div className="min-h-screen overflow-hidden bg-[#000] relative">
+      <Navbar onSelectSection={setActiveSection} activeSection={activeSection} />
       <AnimatePresence mode="wait">
         <motion.div
           key={activeSection}
@@ -63,4 +65,3 @@ function App() {
 }
 
 export default App;
-
