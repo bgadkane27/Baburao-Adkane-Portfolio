@@ -1,41 +1,68 @@
+import { useState } from "react";
 import { NAV_LINKS } from "../constants";
+import { X, Menu } from "lucide-react";
 
 const Navbar = ({ onSelectSection, activeSection }) => {
-  const navStyle =
-    "backdrop-blur-sm bg-white/5 border border-white/10 rounded-full px-4 py-2 shadow-lg";
-
-  if (activeSection === "hero") {
-    return (
-      <ul
-        className={`flex flex-row flex-wrap justify-center gap-6 md:gap-14 tracking-wider text-sm md:text-sm fixed bottom-8 left-0 right-0 z-50 ${navStyle}`}
-      >
-        {NAV_LINKS.map((link, index) => (
-          <button
-            key={index}
-            onClick={() => onSelectSection(link.key)}
-            className="text-[#cbd5e] hover:text-[#0ff] font-semibold transition-all duration-200 uppercase text-xs"
-          >
-            {link.label}
-          </button>
-        ))}
-      </ul>
-    );
-  }
+  const [menuOpen, setMenuOpen] = useState(false);
+  const isHero = activeSection === "hero";
+  const handleSelect = (key) => {
+    onSelectSection(key);
+    setMenuOpen(false);
+  };
 
   return (
-    <div
-      className={`fixed top-6 right-8 z-50 flex gap-6 ${navStyle}`}
-    >
-      {NAV_LINKS.map((link, index) => (
-        <button
-          key={index}
-          onClick={() => onSelectSection(link.key)}
-          className="text-[#cbd5e] hover:text-[#0ff] font-semibold transition-all duration-200 uppercase text-xs"
-        >
-          {link.label}
-        </button>
-      ))}
-    </div>
+    <nav className="fixed z-50 top-6 right-6 md:right-8 flex justify-end">
+      <ul className="hidden md:flex gap-8 tracking-widest text-sm text-gray-400">
+        {NAV_LINKS.map((link, index) => (
+          <li key={link.key} className="flex items-center">
+            <button
+              onClick={() => handleSelect(link.key)}
+              className={`uppercase font-semibold transition-colors duration-200 ${
+                activeSection === link.key
+                  ? "text-cyan-400"
+                  : "text-gray-400 hover:text-cyan-400"
+              }`}
+            >
+              {link.label}
+            </button>
+            {index !== NAV_LINKS.length - 1 && (
+              <span className="text-gray-500 mx-2">|</span>
+            )}
+          </li>
+        ))}
+      </ul>
+
+      <button
+        onClick={() => setMenuOpen(true)}
+        className="md:hidden text-gray-400"
+      >
+        <Menu size={30} />
+      </button>
+
+      {menuOpen && (
+        <div className="fixed inset-0 bg-black flex flex-col items-center justify-center space-y-8 z-50">
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="absolute top-6 right-6 text-gray-400"
+          >
+            <X size={36} />
+          </button>
+          {NAV_LINKS.map((link) => (
+            <button
+              key={link.key}
+              onClick={() => handleSelect(link.key)}
+              className={`text-2xl md:text-3xl font-bold uppercase tracking-wide transition-colors duration-200 ${
+                activeSection === link.key
+                  ? "text-cyan-400"
+                  : "text-gray-400 hover:text-cyan-400"
+              }`}
+            >
+              {link.label}
+            </button>
+          ))}
+        </div>
+      )}
+    </nav>
   );
 };
 
