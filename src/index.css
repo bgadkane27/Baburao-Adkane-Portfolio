@@ -1655,6 +1655,10 @@ s
         color: var(--color-white-50)
     }
 
+    .text-white-60{
+        color: #cbd5e1;
+    }
+
     .italic {
         font-style: italic
     }
