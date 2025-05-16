@@ -1,17 +1,16 @@
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Stars } from "@react-three/drei";
-import Model from "../components/Model";
+import CommonCanvas from "../components/CommonCanvas";
 
 const Hero = ({ onSelectSection }) => {
   return (
     <div className="hero-container relative">
-      <Canvas camera={{ position: [0, 0, -2], fov: 60 }}>
+      {/* <Canvas camera={{ position: [0, 0, -2], fov: 60 }}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[2, 2, 5]} />
         <Stars radius={100} depth={50} count={800} factor={4} />
         <Model />
         <OrbitControls enableZoom={false} />
-      </Canvas>
+      </Canvas> */}
+      <CommonCanvas />
 
       <div className="hero-content">
         <h1
@@ -38,7 +37,7 @@ const Hero = ({ onSelectSection }) => {
         </div>
 
         <p
-          className="uppercase leading-8 text-[10px] sm:text-sm text-[#fff] font-semibold bg-cyan-500/20 py-2 rounded-md"
+          className="uppercase leading-8 text-[10px] sm:text-sm text-[#fff] bg-cyan-500/20 py-2 rounded-md"
           data-aos="zoom-in"
           data-aos-duration="2000"
           data-aos-delay="600"

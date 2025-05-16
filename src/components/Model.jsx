@@ -3,7 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import { useRef} from "react";
 
 const Model = () => {
-  const model = useGLTF('/models/mushrooms.glb'); 
+  const model = useGLTF('/models/rainbow.glb'); 
   const ref = useRef();
 
   useFrame(() => {

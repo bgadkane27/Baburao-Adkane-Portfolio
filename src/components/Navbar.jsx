@@ -15,6 +15,9 @@ const Navbar = ({ onSelectSection, activeSection }) => {
       <ul className="hidden md:flex gap-8 tracking-widest text-sm text-gray-400">
         {NAV_LINKS.map((link, index) => (
           <li key={link.key} className="flex items-center">
+            {index !== NAV_LINKS.length && (
+              <span className="text-gray-500 mx-2">|</span>
+            )}
             <button
               onClick={() => handleSelect(link.key)}
               className={`uppercase font-semibold transition-colors duration-200 ${
@@ -24,10 +27,7 @@ const Navbar = ({ onSelectSection, activeSection }) => {
               }`}
             >
               {link.label}
-            </button>
-            {index !== NAV_LINKS.length - 1 && (
-              <span className="text-gray-500 mx-2">|</span>
-            )}
+            </button>            
           </li>
         ))}
       </ul>
