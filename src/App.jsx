@@ -119,10 +119,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from './sections/Hero';
 import Work from './sections/Work';
-import Experience from './sections/Experience';
-import Skills from './sections/Skills';
 import Testimonials from './sections/Testimonials';
 import Contact from './sections/Contact';
+import AboutMe from "./sections/AboutMe";
 
 function App() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -131,8 +130,8 @@ function App() {
     const sections = {
       hero: <Hero onSelectSection={setActiveSection} />,
       work: <Work />,
-      experience: <Experience />,
-      skills: <Skills />,
+      about: <AboutMe />,
+      // skills: <Skills />,
       testimonials: <Testimonials />,
       contact: <Contact />,
     };

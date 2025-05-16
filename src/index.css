@@ -2090,6 +2090,19 @@ section {
     text-align: center;
     color: #cbd5e1;
   }
+
+  .section-content {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* color: #cbd5e1; */
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
   
   .hero-content h1 {
     font-size: 5vw;

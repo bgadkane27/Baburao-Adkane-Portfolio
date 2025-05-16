@@ -1,13 +1,14 @@
 import CommonCanvas from "../components/CommonCanvas";
+import SectionTitle from "../components/SectionTitle";
 
 const Contact = () => {
   return (
     <div className="hero-container relative">
       <CommonCanvas />
-      <div className="hero-content">
-        <h1 className="text-6xl font-bold">WORK</h1>
-        <p className="mt-4 text-lg tracking-widest">PROJECTS | COLLABORATIONS | EXPLORATIONS</p>
-      </div>
+      <SectionTitle
+        title="Contact"
+        subtitles={["Let's team up for the best collaboration experience. Get in touch !"]}
+      />
     </div>
   );
 }

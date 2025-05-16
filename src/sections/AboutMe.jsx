@@ -1,16 +1,16 @@
 import CommonCanvas from '../components/CommonCanvas';
 import SectionTitle from '../components/SectionTitle';
 
-const Skills = () => {
+const AboutMe = () => {
   return (
     <div className="hero-container relative">
       <CommonCanvas />
       <SectionTitle
-        title="Skills"
-        subtitles={["Projects", "Collaborations", "Explorations"]}
+        title="About Me"
+        subtitles={["Bio", "Areas Of Expertise","Experience",  "Social Links"]}
       />
     </div>
   );
 }
 
-export default Skills;
+export default AboutMe;

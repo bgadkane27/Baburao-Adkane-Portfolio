@@ -7,7 +7,7 @@ const CommonModel = () => {
   const ref = useRef();
 
   useFrame(() => {
-    ref.current.rotation.y += 0.0002;
+    ref.current.rotation.y += 0.0003;
     ref.current.rotation.x += 0.00009;
   });
 
@@ -16,7 +16,7 @@ const CommonModel = () => {
       ref={ref}
       object={model.scene}
       scale={1}
-      position={[0, 0, 1]}
+      position={[0, 0, 2]}
     />
   );
 };
