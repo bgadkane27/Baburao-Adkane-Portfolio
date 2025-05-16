@@ -10,7 +10,7 @@ const SectionTitle = ({ title, subtitles }) => {
         <div className="text-[3vw] sm:text-sm uppercase space-x-4 absolute z-100">
           {subtitles.map((item, index) => (
             <React.Fragment key={index}>
-              <span className="text-[#cbd5e1] tracking-wider">{item}</span>
+              <span className="text-[#cbd5e1] tracking-wider bg-cyan-500/10 py-2 px-3 rounded-full">{item}</span>
               {index !== subtitles.length - 1 && <span>|</span>}
             </React.Fragment>
           ))}

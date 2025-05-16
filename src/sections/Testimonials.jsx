@@ -7,7 +7,7 @@ const Testimonials = () => {
       <CommonCanvas />
       <SectionTitle
         title="Testimonials"
-        subtitles={["Words from the People Who Worked with Me."]}
+        subtitles={["Words from the People Who Work with Me."]}
       />
     </div>
   );
