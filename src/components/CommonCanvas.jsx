@@ -12,7 +12,7 @@ const CommonCanvas = () => {
       <Suspense fallback={null}>
         <CommonModel />
       </Suspense>
-      <OrbitControls enableZoom={true} />
+      <OrbitControls enableZoom={false} />
     </Canvas>
   );
 };

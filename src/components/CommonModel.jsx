@@ -16,7 +16,7 @@ const CommonModel = () => {
       ref={ref}
       object={model.scene}
       scale={1}
-      position={[0, 0, 2]}
+      position={[0, 0, 1]}
     />
   );
 };

@@ -130,7 +130,7 @@ function App() {
     const sections = {
       hero: <Hero onSelectSection={setActiveSection} />,
       work: <Work />,
-      about: <AboutMe />,
+      about: <AboutMe onSelectSection={setActiveSection} />,
       // skills: <Skills />,
       testimonials: <Testimonials />,
       contact: <Contact />,
