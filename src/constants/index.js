@@ -29,3 +29,15 @@ export const WORK_DATA = [
     label: "Client Statisfaction",
   }
 ];
+
+export const servicesLeft = [
+  "Product Design",
+  "User Experience Design",
+  "Interaction Design"
+];
+
+export const servicesRight = [
+  "Branding & Visual Identity Design",
+  "Brand & Product Strategy",
+  "Research & testing"
+];

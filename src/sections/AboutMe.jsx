@@ -1,6 +1,7 @@
 
 import React from 'react';
 import CommonCanvas from '../components/CommonCanvas';
+import { servicesLeft, servicesRight } from '../constants';
 
 const AboutMe = ({ onSelectSection }) => {
   // Define title and subtitles locally
@@ -32,14 +33,14 @@ const AboutMe = ({ onSelectSection }) => {
           </div>
         </div>
 
-        <div className='flex items-center justify-center mb-5'>
+        <div className='flex items-center mb-2'>
           <h1 className='uppercase tracking-widest text-2xl font-bold z-1000 text-cyan-400/50'>[ B I O ]</h1>
         </div>
 
         {/* About Me Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 text-white h-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-4 mb-12 text-white h-auto">
           {/* left: Image + Contact Info */}
-          <div className="flex flex-col items-center md:items-start space-y-6 z-500">
+          <div className="flex flex-col items-center md:items-start space-y-6 z-500" data-aos="fade-up" data-aos-duration="2000">
             <img
               src="/images/profile.jpeg"
               alt="Baburao Adkane"
@@ -47,10 +48,10 @@ const AboutMe = ({ onSelectSection }) => {
             />
           </div>
           {/* Right: Text Content */}
-          <div className="flex flex-col item-center text-justify space-y-4 z-500">
+          <div className="flex flex-col item-center text-justify space-y-4 z-500" data-aos="fade-up" data-aos-duration="2000">
             <h1 className="text-4xl font-bold">Hey there, I'm Baburao</h1>
             <p className="text-gray-300 leading-relaxed text-lg">
-            As a Senior Product Designer with 5+ years of experience, including 3+ years specializing in product design, I lead the design strategy for Deriv GO and native experiences at Deriv, a global leader in options trading and CFDs. I oversee UX processes for mobile platforms, delivering seamless, scalable, and intuitive trading experiences to millions worldwide.
+              As a Senior Product Designer with 5+ years of experience, including 3+ years specializing in product design, I lead the design strategy for Deriv GO and native experiences at Deriv, a global leader in options trading and CFDs. I oversee UX processes for mobile platforms, delivering seamless, scalable, and intuitive trading experiences to millions worldwide.
             </p>
             <p className="text-gray-300 leading-relaxed text-lg">
               I specialize in simplifying complex workflows, crafting robust interaction patterns, and creating scalable design systems that enhance usability and align with business goals. Partnering with cross-functional teams, I bridge user needs with innovative design practices to drive meaningful, impact-driven solutions.
@@ -69,8 +70,42 @@ const AboutMe = ({ onSelectSection }) => {
             </p>
           </div>
         </div>
-        <div className='flex items-center justify-center mb-5'>
+        <div className='flex items-center mb-5'>
           <h1 className='uppercase tracking-widest text-2xl font-bold z-1000 text-cyan-400/50'>[ Areas of Expertise ]</h1>
+        </div>
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-4 text-white h-auto">
+          <div className="flex flex-col space-y-10 z-500">
+            <div className="border-b-2 border-gray-700 pb-2 sm:text-xl">Product Design</div>
+            <div className="border-b-2 border-gray-700 pb-2 sm:text-xl">User Experience Design</div>
+            <div className="border-b-2 border-gray-700 pb-2 sm:text-xl">Interaction Design</div>
+          </div>          
+          <div className="flex flex-col space-y-10 z-500">
+            <div className="border-b-2 border-gray-700 pb-2 sm:text-xl">Branding & Visual Identity Design</div>
+            <div className="border-b-2 border-gray-700 pb-2 sm:text-xl">Brand & Product Strategy</div>
+            <div className="border-b-2 border-gray-700 pb-2 sm:text-xl">Research & testing</div>
+          </div>
+        </div> */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-4 mb-12 text-white h-auto">
+          {/* Left Column */}
+          <div className="flex flex-col space-y-10 z-500">
+            {servicesLeft.map((service, index) => (
+              <div key={index} className="border-b-2 border-gray-700 pb-2 sm:text-xl">
+                {service}
+              </div>
+            ))}
+          </div>
+          {/* Right Column */}
+          <div className="flex flex-col space-y-10 z-500">
+            {servicesRight.map((service, index) => (
+              <div key={index} className="border-b-2 border-gray-700 pb-2 sm:text-xl">
+                {service}
+              </div>
+            ))}
+          </div>
+
+        </div>
+        <div className='flex items-center mb-5'>
+          <h1 className='uppercase tracking-widest text-2xl font-bold z-1000 text-cyan-400/50'>[ Experience ]</h1>
         </div>
       </div>
     </div>

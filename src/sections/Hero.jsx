@@ -1,9 +1,11 @@
-import CommonCanvas from "../components/CommonCanvas";
-
+// import CommonCanvas from "../components/CommonCanvas";
+import HeroCanvas from "../components/HeroCanvas";
 const Hero = ({ onSelectSection }) => {
   return (
     <div className="hero-container relative">
-      <CommonCanvas />
+      {/* <CommonCanvas /> */}
+
+      <HeroCanvas />
 
       <div className="hero-content">
         <h1
@@ -23,14 +25,14 @@ const Hero = ({ onSelectSection }) => {
           </span>
         </h1>
 
-        <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+        <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
           <p className="uppercase font-semibold sm:text-xl text-[14px]">
             QA/QC ENGINEER
           </p>
         </div>
 
         <p
-          className="uppercase leading-8 text-[10px] sm:text-sm text-[#fff] bg-cyan-500/20 py-2 rounded-md"
+          className="uppercase leading-8 text-[10px] sm:text-sm text-[#fff] py-2 rounded-md bg-cyan-300/30"
           data-aos="zoom-in"
           data-aos-duration="2000"
           data-aos-delay="600"
