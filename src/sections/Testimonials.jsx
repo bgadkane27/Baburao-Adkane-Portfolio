@@ -1,5 +1,7 @@
 import CommonCanvas from "../components/CommonCanvas";
+import Experience from "../components/Experience";
 import SectionTitle from "../components/SectionTitle";
+
 
 const Testimonials = () => {  
   return (
@@ -9,6 +11,7 @@ const Testimonials = () => {
         title="Testimonials"
         subtitles={["Words from the People Who Work with Me."]}
       />
+      <Experience />
     </div>
   );
 }
