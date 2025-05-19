@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
-import { OrbitControls, Stars } from '@react-three/drei';
+import { OrbitControls, Stars, Preload } from '@react-three/drei';
 import CommonModel from './CommonModel';
 
 const CommonCanvas = () => {
@@ -12,6 +12,7 @@ const CommonCanvas = () => {
       <Suspense fallback={null}>
         <CommonModel />
       </Suspense>
+      <Preload all />
       <OrbitControls enableZoom={false} />
     </Canvas>
   );
