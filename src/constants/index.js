@@ -59,11 +59,11 @@ export const servicesRight = [
 
 export const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    //icon: starbucks,
+    title: "QA/QC Engineer",
+    company_name: "Expert Business Solutions",
+    icon: "/src/assets/company/enfinity.svg",
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "March 2023 - Present",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -72,11 +72,11 @@ export const experiences = [
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    //icon: tesla,
+    title: "Software Test Engineer",
+    company_name: "WebRelier Software Solutions Pvt. Ltd.",
+    icon: "/src/assets/company/webrelier.png",
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Aug 2020 - Feb 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -85,11 +85,11 @@ export const experiences = [
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    //icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    title: "Assistant Manager",
+    company_name: "YES Bank Ltd.",
+    icon: "/src/assets/company/yesbank.png",
+    iconBg: "#000",
+    date: "Mar 2017 - Jul 2020",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -98,11 +98,11 @@ export const experiences = [
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    //icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    title: "Assistant Manager",
+    company_name: "HDFC Bank Ltd.",
+    icon: "/src/assets/company/hdfc.png",
+    iconBg: "#fff",
+    date: "Mar 2015 - Mar 2017",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",

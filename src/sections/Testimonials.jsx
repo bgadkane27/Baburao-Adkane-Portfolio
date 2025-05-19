@@ -1,5 +1,4 @@
 import CommonCanvas from "../components/CommonCanvas";
-import Experience from "../components/Experience";
 import SectionTitle from "../components/SectionTitle";
 
 
@@ -10,8 +9,7 @@ const Testimonials = () => {
       <SectionTitle
         title="Testimonials"
         subtitles={["Words from the People Who Work with Me."]}
-      />
-      <Experience />
+      />      
     </div>
   );
 }
