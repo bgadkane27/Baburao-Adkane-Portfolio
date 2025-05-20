@@ -1,3 +1,9 @@
+import { ReactComponent as EmailIcon } from "../assets/social/email.png";
+import { ReactComponent as VimeoIcon } from "../assets/social/vimeo.png";
+import { ReactComponent as InstagramIcon } from "../assets/social/instagram.svg";
+import { ReactComponent as FacebookIcon } from "../assets/social/facebook.png";
+import { ReactComponent as LinkedInIcon } from "../assets/social/linkedin.png";
+
 export const NAV_LINKS = [
   { label: "Home", key: "hero" },
   { label: "About Me", key: "about" },
@@ -111,3 +117,32 @@ export const experiences = [
     ],
   },
 ];
+
+export const socialLinks = [
+  {
+    id: 1,
+    icon: <EmailIcon className="w-8 h-8" />,
+    link: "mailto:youremail@example.com",
+  },
+  {
+    id: 2,
+    icon: <InstagramIcon className="w-8 h-8" />,
+    link: "https://instagram.com/yourprofile",
+  },
+  {
+    id: 3,
+    icon: <FacebookIcon className="w-8 h-8" />,
+    link: "https://facebook.com/yourprofile",
+  },
+  {
+    id: 4,
+    icon: <LinkedInIcon className="w-8 h-8" />,
+    link: "https://linkedin.com/in/yourprofile",
+  },
+  {
+    id: 5,
+    icon: <VimeoIcon className="w-8 h-8" />,
+    link: "https://youtube.com/yourchannel",
+  },
+];
+
