@@ -20,7 +20,7 @@ const Navbar = ({ onSelectSection, activeSection }) => {
             )}
             <button
               onClick={() => handleSelect(link.key)}
-              className={`uppercase font-semibold transition-colors duration-200 ${
+              className={`uppercase font-semibold transition-colors duration-200 hover:cursor-pointer ${
                 activeSection === link.key
                   ? "text-cyan-400"
                   : "text-gray-400 hover:text-cyan-400"
@@ -34,16 +34,16 @@ const Navbar = ({ onSelectSection, activeSection }) => {
 
       <button
         onClick={() => setMenuOpen(true)}
-        className="md:hidden text-gray-400"
+        className="md:hidden text-gray-400 hover: cursor-pointer"
       >
         <Menu size={30} />
       </button>
 
       {menuOpen && (
-        <div className="fixed inset-0 bg-black flex flex-col items-center justify-center space-y-8 z-50">
+        <div className="fixed inset-0 bg-black/90 flex flex-col items-center justify-center space-y-8 z-50">
           <button
             onClick={() => setMenuOpen(false)}
-            className="absolute top-6 right-6 text-gray-400"
+            className="absolute top-6 right-6 text-gray-400 hover: cursor-pointer"
           >
             <X size={36} />
           </button>
@@ -51,7 +51,7 @@ const Navbar = ({ onSelectSection, activeSection }) => {
             <button
               key={link.key}
               onClick={() => handleSelect(link.key)}
-              className={`text-2xl md:text-3xl font-bold uppercase tracking-wide transition-colors duration-200 ${
+              className={`text-2xl md:text-3xl font-bold uppercase tracking-wide transition-colors duration-200 hover: cursor-pointer ${
                 activeSection === link.key
                   ? "text-cyan-400"
                   : "text-gray-400 hover:text-cyan-400"

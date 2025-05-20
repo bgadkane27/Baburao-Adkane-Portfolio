@@ -34,13 +34,8 @@ const AboutMe = ({ onSelectSection }) => {
             ))}
           </div>
         </div>
-
-        <div className='flex items-center mb-2'>
-          <h1 className='uppercase tracking-widest text-2xl font-bold z-1000 text-cyan-400/50'>[ B I O ]</h1>
-        </div>
-
         {/* About Me Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-4 mb-12 text-white h-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-4 mx-auto text-white h-auto">
           {/* left: Image + Contact Info */}
           <div className="flex flex-col items-center md:items-start space-y-6 z-500" data-aos="fade-up" data-aos-duration="2000">
             <img
@@ -72,9 +67,6 @@ const AboutMe = ({ onSelectSection }) => {
             </p>
           </div>
         </div>
-        {/* <div className='flex items-center mb-5'>
-          <h1 className='uppercase tracking-widest text-2xl font-bold z-1000 text-cyan-400/50'>[ Areas of Expertise ]</h1>
-        </div> */}
         <ExpertArea />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-4 mb-12 text-white h-auto">
           {/* Left Column */}
