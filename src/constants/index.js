@@ -1,31 +1,52 @@
-import { ReactComponent as EmailIcon } from "../assets/social/email.png";
-import { ReactComponent as VimeoIcon } from "../assets/social/vimeo.png";
-import { ReactComponent as InstagramIcon } from "../assets/social/instagram.svg";
-import { ReactComponent as FacebookIcon } from "../assets/social/facebook.png";
-import { ReactComponent as LinkedInIcon } from "../assets/social/linkedin.png";
+import { Mail, Instagram, Facebook, Linkedin, Youtube, Phone } from "lucide-react";
+
+export const socialLinks = [
+  {
+    id: 6,
+    Icon: Phone,
+    link: "tel:+919673929867",
+    gradient: ["#00ff00", "#66ff66"], // green shades
+  },
+  {
+    id: 1,
+    Icon: Mail,
+    link: "mailto:bgadkane@gmail.com",
+    gradient: ["#ff9900", "#ffcc00"], // orange-yellow
+  },
+  {
+    id: 2,
+    Icon: Instagram,
+    link: "https://instagram.com/",
+    gradient: ["#feda75", "#d62976"], // light orange to pink
+  },
+  {
+    id: 3,
+    Icon: Facebook,
+    link: "https://facebook.com/",
+    gradient: ["#1877F2", "#3b5998"], // FB blues
+  },
+  {
+    id: 4,
+    Icon: Linkedin,
+    link: "https://linkedin.com/in/",
+    gradient: ["#0077b5", "#00a0dc"], // LinkedIn blues
+  },
+  {
+    id: 5,
+    Icon: Youtube,
+    link: "https://youtube.com/",
+    gradient: ["#ff0000", "#cc0000"], // red tones
+  },
+];
+
 
 export const NAV_LINKS = [
   { label: "Home", key: "hero" },
   { label: "About Me", key: "about" },
-  { label: "Work", key: "work" },  
+  { label: "Work", key: "work" },
   // { label: "Skills", key: "skills" },
   { label: "Testimonials", key: "testimonials" },
   { label: "Contact", key: "contact" },
-];
-
-export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
 ];
 
 export const WORK_DATA = [
@@ -43,7 +64,7 @@ export const WORK_DATA = [
     suffix: "+",
     value: "100",
     label: "No of Clients",
-  },    
+  },
   {
     suffix: "%",
     value: "90",
@@ -118,31 +139,5 @@ export const experiences = [
   },
 ];
 
-export const socialLinks = [
-  {
-    id: 1,
-    icon: <EmailIcon className="w-8 h-8" />,
-    link: "mailto:youremail@example.com",
-  },
-  {
-    id: 2,
-    icon: <InstagramIcon className="w-8 h-8" />,
-    link: "https://instagram.com/yourprofile",
-  },
-  {
-    id: 3,
-    icon: <FacebookIcon className="w-8 h-8" />,
-    link: "https://facebook.com/yourprofile",
-  },
-  {
-    id: 4,
-    icon: <LinkedInIcon className="w-8 h-8" />,
-    link: "https://linkedin.com/in/yourprofile",
-  },
-  {
-    id: 5,
-    icon: <VimeoIcon className="w-8 h-8" />,
-    link: "https://youtube.com/yourchannel",
-  },
-];
+
 

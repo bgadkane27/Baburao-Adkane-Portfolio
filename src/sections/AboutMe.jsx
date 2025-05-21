@@ -3,7 +3,9 @@ import React from 'react';
 import CommonCanvas from '../components/CommonCanvas';
 import Experience from "../components/Experience";
 import ExpertArea from "../components/ExpertArea";
+import SocialArea from "../components/SocialArea";
 import { servicesLeft, servicesRight } from '../constants';
+import SocialLinks from '../components/SocialLinks';
 
 const AboutMe = ({ onSelectSection }) => {
   // Define title and subtitles
@@ -16,7 +18,7 @@ const AboutMe = ({ onSelectSection }) => {
       <div className="fixed inset-0 z-10 pointer-events-none">
         <CommonCanvas />
       </div>
-
+      {/* Main Content */}
       <div className="pt-20 px-4 md:px-8 max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="flex flex-col items-center justify-center relative">
@@ -67,26 +69,38 @@ const AboutMe = ({ onSelectSection }) => {
             </p>
           </div>
         </div>
-        <ExpertArea />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-4 mb-12 text-white h-auto">
-          {/* Left Column */}
-          <div className="flex flex-col space-y-10 z-500">
-            {servicesLeft.map((service, index) => (
-              <div key={index} className="border-b-2 border-gray-700 pb-2 sm:text-xl">
-                {service}
-              </div>
-            ))}
-          </div>
-          {/* Right Column */}
-          <div className="flex flex-col space-y-10 z-500">
-            {servicesRight.map((service, index) => (
-              <div key={index} className="border-b-2 border-gray-700 pb-2 sm:text-xl">
-                {service}
-              </div>
-            ))}
+        {/* Area of Expertise */}
+        <div className='mx-auto'>
+          <ExpertArea />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-4 mb-12 text-white h-auto">
+            {/* Left Column */}
+            <div className="flex flex-col space-y-10 z-500">
+              {servicesLeft.map((service, index) => (
+                <div key={index} className="border-b-2 border-gray-700 pb-2 sm:text-xl">
+                  {service}
+                </div>
+              ))}
+            </div>
+            {/* Right Column */}
+            <div className="flex flex-col space-y-10 z-500">
+              {servicesRight.map((service, index) => (
+                <div key={index} className="border-b-2 border-gray-700 pb-2 sm:text-xl">
+                  {service}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        <Experience />
+        {/* Experience */}
+        <div className='mx-auto'>
+          <Experience />
+        </div>
+        {/* SocialLinks */}
+        <div className='mx-auto'>
+          <SocialArea />
+          <SocialLinks />
+        </div>
+
       </div>
     </div>
   );
