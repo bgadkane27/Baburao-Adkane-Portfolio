@@ -88,8 +88,8 @@ export const experiences = [
   {
     title: "QA/QC Engineer",
     company_name: "Expert Business Solutions",
-    icon: "/src/assets/company/enfinity.svg",
-    iconBg: "#383E56",
+    icon: "/company/enfinity.svg",
+    iconBg: "#fff",
     date: "March 2023 - Present",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
@@ -101,8 +101,8 @@ export const experiences = [
   {
     title: "Software Test Engineer",
     company_name: "WebRelier Software Solutions Pvt. Ltd.",
-    icon: "/src/assets/company/webrelier.png",
-    iconBg: "#E6DEDD",
+    icon: "/company/webrelier.png",
+    iconBg: "#fff",
     date: "Aug 2020 - Feb 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
@@ -114,8 +114,8 @@ export const experiences = [
   {
     title: "Assistant Manager",
     company_name: "YES Bank Ltd.",
-    icon: "/src/assets/company/yesbank.png",
-    iconBg: "#000",
+    icon: "/company/yesbank.png",
+    iconBg: "#fff",
     date: "Mar 2017 - Jul 2020",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
@@ -127,7 +127,7 @@ export const experiences = [
   {
     title: "Assistant Manager",
     company_name: "HDFC Bank Ltd.",
-    icon: "/src/assets/company/hdfc.png",
+    icon: "/company/hdfc.png",
     iconBg: "#fff",
     date: "Mar 2015 - Mar 2017",
     points: [
