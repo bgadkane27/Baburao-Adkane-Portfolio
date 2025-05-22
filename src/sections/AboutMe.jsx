@@ -35,7 +35,7 @@ const AboutMe = ({ onSelectSection }) => {
             ))}
           </div>
         </div>
-        <Bio />
+        <Bio onSelectSection={onSelectSection} />
         <ExpertArea />
         <Experience />
         <SocialLink />

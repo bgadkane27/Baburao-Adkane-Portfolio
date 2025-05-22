@@ -5,7 +5,7 @@ import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
 
-const Bio = ({onSelectSection}) => {
+const Bio = ({ onSelectSection = () => {} }) => {
    
     return (
         <>
