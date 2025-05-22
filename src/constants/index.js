@@ -44,7 +44,6 @@ export const NAV_LINKS = [
   { label: "Home", key: "hero" },
   { label: "About Me", key: "about" },
   { label: "Work", key: "work" },
-  // { label: "Skills", key: "skills" },
   { label: "Testimonials", key: "testimonials" },
   { label: "Contact", key: "contact" },
 ];
