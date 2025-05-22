@@ -34,6 +34,47 @@ const Work = ({ onSelectSection }) => {
           </div>
         </div>
         <Stats />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 mx-auto">
+
+          <div className="flex flex-col items-center md:items-start space-y-6 z-500 group bg-amber-200 overflow-hidden rounded-4xl">
+            <div>
+              <img
+              src="/images/profile.jpeg"
+              alt="Baburao Adkane"
+              className="rounded-lg object-cover w-auto h-auto transition-transform duration-400 group-hover:scale-110"
+            />
+            </div>
+            <div>
+              <p className='px-16 py-4'>ERP</p>
+            </div>
+            
+          </div>
+          <div className="flex flex-col items-center md:items-start space-y-6 z-500 group bg-amber-200 overflow-hidden rounded-4xl">
+            <div>
+              <img
+              src="/images/profile.jpeg"
+              alt="Baburao Adkane"
+              className="rounded-lg object-cover w-auto h-auto transition-transform duration-400 group-hover:scale-110"
+            />
+            </div>
+            <div>
+              <p className='px-16'>ERP</p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center md:items-start space-y-6 z-500 group bg-amber-200 overflow-hidden rounded-4xl">
+            <div>
+              <img
+              src="/images/profile.jpeg"
+              alt="Baburao Adkane"
+              className="rounded-lg object-cover w-auto h-auto transition-transform duration-400 group-hover:scale-110"
+            />
+            </div>
+            <div>
+              <p className='px-16'>ERP</p>
+            </div>
+          </div>
+
+        </div>
         <SocialLink />
       </div>
     </div>

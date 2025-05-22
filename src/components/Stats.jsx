@@ -23,17 +23,17 @@ const Stats = () => {
             </motion.div>
 
             <div id='work' ref={ref}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mt-12 mx-auto h-auto max-w-7xl pr-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mt-12 mx-auto h-auto overflow-hidden">
                     {
                         WORK_DATA.map((item, index) => (
-                            <div key={index} className='bg-[#1d1836] rounded-lg p-10 flex flex-col justify-center items-center text-center'>
-                                <div className='text-white text-4xl font-bold'>
+                            <div key={index} className='bg-cyan-300/10 rounded-4xl px-8 py-10'>
+                                <div className='text-white text-7xl font-bold'>
                                     {inView ? (
                                         <CountUp suffix={item.suffix} duration={2} end={parseFloat(item.value)} />
                                     ) : (
                                         "0"
                                     )}
-                                    <div className="sm:text-xl font-semibold tracking-wider mt-2">{item.label}</div>
+                                    <div className="sm:text-xl font-medium tracking-wider mt-10">{item.label}</div>
                                 </div>
                             </div>
                         ))
