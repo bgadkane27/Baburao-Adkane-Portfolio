@@ -16,7 +16,7 @@ const SocialLink = () => {
                 </h2>
             </motion.div>
 
-            <div className="relative flex justify-center items-center gap-12 mt-12 z-50">
+            <div className="relative flex flex-wrap justify-center items-center gap-12 mt-12 z-50">
                 {socialLinks.map(({ id, Icon, link, gradient }) => (
                     <a
                         key={id}
@@ -38,7 +38,7 @@ const SocialLink = () => {
                             (e.currentTarget.style.filter = `drop-shadow(0 0 0 transparent)`)
                         }
                     >
-                        <Icon className="w-8 h-auto" />
+                        <Icon className="w-5 h-auto md:w-8" />
                     </a>
                 ))}
             </div>
