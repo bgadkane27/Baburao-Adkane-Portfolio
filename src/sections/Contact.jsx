@@ -2,6 +2,7 @@
 import React from 'react';
 import CommonCanvas from '../components/CommonCanvas';
 import SocialLink from '../components/SocialLink';
+import ContactUs from '../components/ContactUs';
 
 const Contact = ({ onSelectSection }) => {
   // Define title and subtitles
@@ -21,17 +22,17 @@ const Contact = ({ onSelectSection }) => {
           <h1 className="uppercase text-[10vw] text-cyan-300/20 text-nowrap font-extralight tracking-wide leading-none z-500">
             {title}
           </h1>
-          <div className="text-[3vw] sm:text-sm uppercase space-x-4 absolute z-10">
+          <div className="hidden md:flex text-[3vw] sm:text-sm uppercase flex-wrap justify-center gap-4 absolute z-500">
             {subtitles.map((item, index) => (
               <React.Fragment key={index}>
                 <span className="text-[#cbd5e1] tracking-wider bg-cyan-500/10 py-2 px-3 rounded-full">
                   {item}
                 </span>
-                {index !== subtitles.length - 1 && <span>|</span>}
               </React.Fragment>
             ))}
           </div>
         </div>
+        <ContactUs />
         <SocialLink />
       </div>
     </div>

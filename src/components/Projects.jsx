@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+import { textVariant } from "../utils/motion";
 import { steps } from '../constants';
 import { MoveUpRight } from "lucide-react";
 
@@ -26,10 +26,6 @@ const Projects = () => {
                     {steps.map((item, index) => (
                         <motion.div
                             key={index}
-                            variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-                            initial="hidden"
-                            whileInView="show"
-                            viewport={{ once: true, amount: 0.25 }}
                             className={`${item.bg} rounded-2xl p-6 flex flex-col justify-between`}
                         >
                             <div className="space-y-4">
