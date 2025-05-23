@@ -11,7 +11,7 @@ const Navbar = ({ onSelectSection, activeSection }) => {
   };
 
   return (
-    <nav className="fixed z-1000 top-6 right-6 md:right-8 flex justify-end">
+    <nav className="w-full py-8 px-6 fixed z-1000 top-0 right-0 md:right-0 flex justify-end bg-[#1d1836]">
       <ul className="hidden md:flex gap-8 tracking-widest text-sm text-gray-400">
         {NAV_LINKS.map((link, index) => (
           <li key={link.key} className="flex items-center">
