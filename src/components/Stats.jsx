@@ -33,7 +33,7 @@ const Stats = () => {
                                     ) : (
                                         "0"
                                     )}
-                                    <div className="sm:text-xl font-medium tracking-wider mt-10">{item.label}</div>
+                                    <div className="sm:text-xl text-base font-medium tracking-wider mt-10">{item.label}</div>
                                 </div>
                             </div>
                         ))

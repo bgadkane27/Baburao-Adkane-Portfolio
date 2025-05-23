@@ -138,5 +138,80 @@ export const experiences = [
   },
 ];
 
+export const steps = [
+        {
+            title: "HRMS",
+            description:
+                "A comprehensive and user-friendly platform for all your HR needs. It simplifies HR management, from recruitment to retirement, helps you retain talent and build a high-performing workforce.",
+            link: "Need more details?",
+            href: "https://www.onenfinity.com/hrms",
+            bg: "bg-indigo-500/10",
+            icon: "/product/hrms.svg",
+        },
+        {
+            title: "ERP",
+            description:
+                'Empowering businesses with innovative, scalable cloud ERP. A cloud-based ERP solution is designed exclusively for the growth-minded businesses of today.',
+            link: "Need more details?",
+            href: "https://www.onenfinity.com/erp",
+            bg: "bg-slate-500/20",
+            icon: "/product/erp.svg",
+        },
+        {
+            title: "crm",
+            description:
+                "CRM is a cutting-edge customer relationship management solution for business.",
+            link: "Need more details?",
+            href: "https://www.onenfinity.com/crm",
+            bg: "bg-cyan-500/10",
+            icon: "/product/crm.webp",
+        },
+        {
+            title: "retail",
+            description:
+                "A comprehensive, scalable, and cloud - based POS.Improve sales and gain valuable retail analytics for increased footfalls, inventory management, and customer loyalty programs.",
+            link: "Need more details?",
+            href: "https://www.onenfinity.com/retail",
+            bg: "bg-orange-400/10",
+            icon: "/product/retail.svg",
+        },
+        {
+            title: "Restaurant",
+            description:
+                "A cloud-based POS tailored for restaurants, reduce wastages, menu customization, and real - time inventory tracking and reporting.",
+            link: "Need more details?",
+            href: "https://www.onenfinity.com/restaurant",
+            bg: "bg-lime-500/10",
+            icon: "/product/restaurant.webp",
+        },
+        {
+            title: "Subscription",
+            description:
+                "Manage your subscription billing end to end with user friendly software. Automate recurring charges and send out professional, tax compliant invoices effortlessly.",
+            link: "Need more details?",
+            href: "https://www.onenfinity.com/subscription",
+            bg: "bg-purple-500/10",
+            icon: "/product/subscription.svg",
+        },
+        {
+            title: "Real Estate",
+            description:
+                "Automate rent collection, maintenance tracking, and tenant communication, resulting in higher efficiency and reduced workload.",
+            link: "Need more details?",
+            href: "https://www.onenfinity.com/real-estate",
+            bg: "bg-red-500/10",
+            icon: "/product/realestate.webp",
+        },
+        {
+            title: "Loan Origination System",
+            description:
+                "Loan Origination System is a platform for centrally managing and automate the different stages of loan servicing cycle.",
+            link: "Need more details?",
+            href: "https://www.ltfinance.com/personal-loan",
+            bg: "bg-fuchsia-500/10",
+            icon: "/product/loan.svg",
+        },
+    ];
+
 
 
