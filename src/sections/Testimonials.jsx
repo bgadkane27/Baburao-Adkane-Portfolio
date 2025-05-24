@@ -2,6 +2,7 @@
 import React from 'react';
 import CommonCanvas from '../components/CommonCanvas';
 import SocialLink from '../components/SocialLink';
+import Testimonial from '../components/Testimonial';
 
 const Testimonials = ({ onSelectSection }) => {
   // Define title and subtitles
@@ -32,6 +33,7 @@ const Testimonials = ({ onSelectSection }) => {
             ))}
           </div>
         </div>
+        <Testimonial />
         <SocialLink />
       </div>
     </div>

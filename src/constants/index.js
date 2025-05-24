@@ -28,7 +28,7 @@ export const socialLinks = [
   {
     id: 4,
     Icon: Linkedin,
-    link: "https://linkedin.com/in/",
+    link: "https://www.linkedin.com/in/baburao-adkane-443476250/",
     gradient: ["#0077b5", "#00a0dc"], // LinkedIn blues
   },
   {

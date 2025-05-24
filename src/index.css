@@ -2222,3 +2222,6 @@ section {
     z-index: 1;
   }
   
+  ::-webkit-scrollbar {
+  display: none;
+}

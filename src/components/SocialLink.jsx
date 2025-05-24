@@ -11,9 +11,9 @@ const SocialLink = () => {
                 <p className={`${styles.sectionSubText} text-center`}>
                     Let's connect and collaborate
                 </p>
-                <h2 className={`${styles.sectionHeadText} text-center`}>
+                {/* <h2 className={`${styles.sectionHeadText} text-center`}>
                     Social Profiles
-                </h2>
+                </h2> */}
             </motion.div>
 
             <div className="relative flex flex-wrap justify-center items-center gap-12 mt-12 z-50">

@@ -1,16 +1,75 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import { useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const glowBase =
     "relative flex items-center justify-center transition duration-300";
 
 const ContactUs = () => {
+
+    const formRef = useRef();
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+
+    const [loading, setLoading] = useState(false);
+
+    const handleChange = (e) => {
+        const { target } = e;
+        const { name, value } = target;
+
+        setForm({
+            ...form,
+            [name]: value,
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoading(true);
+
+        emailjs
+            .send(
+                import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+                {
+                    from_name: form.name,
+                    to_name: "Baburao Adkane",
+                    from_email: form.email,
+                    to_email: "bgadkane@gmail.com",
+                    message: form.message,
+                },
+                import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+            )
+            .then(
+                () => {
+                    setLoading(false);
+                    alert("Thank you. I will get back to you as soon as possible.");
+
+                    setForm({
+                        name: "",
+                        email: "",
+                        message: "",
+                    });
+                },
+                (error) => {
+                    setLoading(false);
+                    console.error(error);
+
+                    alert("Ahh, something went wrong. Please try again.");
+                }
+            );
+    };
+
     return (
         <div className="bg-cyan-300/20 text-white p-8 relative z-500 mt-12 rounded-4xl mr-4">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
 
                 {/* Contact Info — left on large, bottom on small */}
                 <div className="space-y-6">
-                    <h1 className="text-7xl font-bold">Let's Connect</h1>
+                    <h1 className="sm:text-7xl text-4xl font-bold">Let's Connect</h1>
                     <p className="text-lg text-gray-400">for the best collabration experience.</p>
                     <div className="space-y-8">
                         <div className="flex items-center">
@@ -53,20 +112,35 @@ const ContactUs = () => {
                 </div>
 
                 {/* Form — right on large, top on small */}
-                <form className="space-y-6">
+                <form
+                ref={formRef}
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+                >
                     <input
                         type="text"
+                        name="name"
                         placeholder="Name"
+                        required
+                        value={form.name}
+                        onChange={handleChange}                        
                         className="w-full bg-transparent border-b border-gray-600 focus:outline-none py-3 text-lg"
                     />
                     <input
                         type="email"
+                        name="email"
                         placeholder="Email"
+                        required
+                        value={form.email}
+                        onChange={handleChange}
                         className="w-full bg-transparent border-b border-gray-600 focus:outline-none py-3 text-lg"
                     />
                     <textarea
-                        placeholder="Message"
                         rows="4"
+                        name="message"
+                        placeholder="Message"
+                        value={form.message}
+                        onChange={handleChange}
                         className="w-full bg-transparent border-b border-gray-600 focus:outline-none py-3 text-lg"
                     ></textarea>
                     <div>
@@ -74,7 +148,7 @@ const ContactUs = () => {
                             type="submit"
                             className="bg-blue-600 px-6 py-3 rounded-full hover:bg-blue-500 transition duration-400"
                         >
-                            Submit
+                            {loading ? "Sending..." : "Send"}
                         </button>
                     </div>
                 </form>
